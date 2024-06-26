@@ -6,7 +6,7 @@ const Root = () => {
     const [counter, setCounter] = React.useState(0);
 
     const callAPI = async () => {
-        const resJSON = await fetch('/api/analytics');
+        const resJSON = await fetch('/api/analytics', { cache: 'no-cache'});
         const res = await resJSON.json();
         setCounter(res);
     }

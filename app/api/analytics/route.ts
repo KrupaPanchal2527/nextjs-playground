@@ -2,7 +2,7 @@ let counter = 1;
 
 export const GET = async () => {
   try {
-    counter++;
+    counter = counter + 1;
 
     return new Response(JSON.stringify(counter), { status: 200 });
   } catch (error: any) {
