@@ -1,7 +1,8 @@
 let counter = 1;
-
 export const GET = async () => {
   try {
+    console.log("Inside GET Request", counter);
+
     counter = counter + 1;
 
     return new Response(JSON.stringify(counter), { status: 200 });
@@ -12,3 +13,5 @@ export const GET = async () => {
     });
   }
 };
+
+export const dynamic = 'force-dynamic'
